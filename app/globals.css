@@ -1,0 +1,295 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 100% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 214 100% 50%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 0 100% 50%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 222 47% 11%; /* Changed from gray to black */
+    --accent: 142 76% 36%; /* Green accent */
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 214 100% 50%;
+    --radius: 0.5rem;
+
+    /* Sidebar variables */
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 214 100% 50%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 0 100% 50%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 214 100% 50%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 214 100% 50%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 0 100% 50%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 210 40% 98%; /* Changed to white in dark mode */
+    --accent: 142 76% 36%; /* Green accent */
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 214 100% 50%;
+
+    /* Sidebar variables */
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 214 100% 50%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 0 100% 50%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 214 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom gradient text */
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-600 via-red-600 to-blue-600 bg-clip-text text-transparent;
+}
+
+/* Green accent gradient text */
+.green-gradient-text {
+  @apply bg-gradient-to-r from-blue-600 via-green-600 to-blue-600 bg-clip-text text-transparent;
+}
+
+/* Custom gradient background */
+.gradient-bg {
+  @apply bg-gradient-to-r from-blue-600 via-red-600 to-blue-600;
+}
+
+/* Green accent gradient background */
+.green-gradient-bg {
+  @apply bg-gradient-to-r from-blue-600 via-green-600 to-blue-600;
+}
+
+/* Custom gradient button hover */
+.gradient-btn-hover {
+  @apply hover:from-blue-700 hover:via-red-700 to-blue-700;
+}
+
+/* Green accent gradient button hover */
+.green-gradient-btn-hover {
+  @apply hover:from-blue-700 hover:via-green-700 to-blue-700;
+}
+
+/* Hide scrollbar for sidebar content */
+[data-sidebar="content"]::-webkit-scrollbar {
+  display: none;
+}
+
+[data-sidebar="content"] {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Card styles for product cards */
+.product-card {
+  @apply bg-card rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105;
+}
+
+/* Main content area */
+.main-content {
+  @apply rounded-lg shadow-lg p-6 my-6;
+}
+
+/* Auth form styles */
+.auth-form {
+  @apply space-y-6 w-full max-w-md mx-auto;
+}
+
+.auth-input {
+  @apply bg-secondary text-foreground border-border;
+}
+
+.auth-button {
+  @apply w-full bg-gradient-to-r from-blue-600 via-green-600 to-blue-600 hover:from-blue-700 hover:via-green-700 hover:to-blue-700;
+}
+
+.auth-link {
+  @apply text-primary hover:underline;
+}
+
+/* Payment method styles */
+.payment-method-card {
+  @apply border-2 border-transparent hover:border-primary cursor-pointer transition-all duration-300;
+}
+
+.payment-method-card.selected {
+  @apply border-primary bg-primary/10;
+}
+
+/* Newegg-inspired styles */
+.newegg-header {
+  @apply bg-gradient-to-r from-blue-700 via-blue-600 to-blue-700 text-white;
+}
+
+.newegg-footer {
+  @apply bg-gradient-to-r from-blue-700 via-green-600 to-blue-700 text-white;
+}
+
+.newegg-button {
+  @apply bg-green-600 hover:bg-green-700 text-white font-medium;
+}
+
+.newegg-card {
+  @apply bg-white border border-gray-200 rounded-md shadow-sm hover:shadow-md transition-all duration-300;
+}
+
+.newegg-section-title {
+  @apply text-xl font-bold text-blue-700 border-b border-gray-200 pb-2 mb-4;
+}
+
+.pc-builder-part {
+  @apply border border-gray-200 rounded-md p-4 mb-4 bg-white hover:border-green-500 cursor-pointer transition-all;
+}
+
+.pc-builder-part.selected {
+  @apply border-green-500 bg-green-50;
+}
+
+.pc-builder-part-empty {
+  @apply border border-dashed border-gray-300 rounded-md p-4 mb-4 bg-gray-50 hover:border-green-500 cursor-pointer transition-all;
+}
+
+.category-card {
+  @apply flex flex-col items-center p-4 bg-white rounded-md shadow-sm hover:shadow-md transition-all text-center;
+}
+
+.brand-logo {
+  @apply grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100;
+}
+
+.deal-badge {
+  @apply absolute top-2 right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-md;
+}
+
+.price-tag {
+  @apply text-green-600 font-bold;
+}
+
+.price-tag-original {
+  @apply text-gray-500 line-through text-sm;
+}
+
+.rating-stars {
+  @apply text-yellow-400 flex;
+}
+
+/* Footer slideshow */
+.footer-slideshow {
+  @apply fixed bottom-0 left-0 right-0 h-64 -z-10 overflow-hidden;
+}
+
+.footer-slideshow-image {
+  @apply absolute inset-0 w-full h-full object-cover opacity-20 transition-opacity duration-1000;
+}
+
+.footer-overlay {
+  @apply absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent;
+}
+
+/* Green accent elements */
+.green-accent-border {
+  @apply border-l-4 border-green-500;
+}
+
+.green-accent-bg {
+  @apply bg-green-50;
+}
+
+.green-accent-icon {
+  @apply text-green-600;
+}
+
+.tech-card {
+  @apply relative overflow-hidden rounded-lg shadow-lg;
+}
+
+.tech-card::before {
+  content: "";
+  @apply absolute inset-0 bg-gradient-to-r from-blue-500/20 via-green-500/20 to-blue-500/20 opacity-80;
+}
+
+.tech-card-content {
+  @apply relative z-10 p-6;
+}
+
+/* Add mobile-specific optimizations */
+@layer utilities {
+  .mobile-container {
+    @apply px-4 sm:px-6 md:px-8;
+  }
+
+  .mobile-padding {
+    @apply py-8 md:py-16;
+  }
+
+  .mobile-text {
+    @apply text-base md:text-lg;
+  }
+
+  .mobile-heading {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  .mobile-subheading {
+    @apply text-xl md:text-2xl;
+  }
+
+  /* Fixed: Added space between utility classes */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .footer-slideshow {
+    height: 180px;
+  }
+
+  .tech-card::before {
+    opacity: 0.9;
+  }
+
+  .newegg-section-title {
+    font-size: 1.25rem;
+  }
+}
