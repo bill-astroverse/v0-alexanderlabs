@@ -108,7 +108,7 @@ export default async function ShopPage({
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div>
             <h2 className="text-2xl font-bold text-blue-700 mb-2">Need Help Building Your Perfect PC?</h2>
-            <p className="text-gray-700 mb-4 md:mb-0">
+            <p className="text-black mb-4 md:mb-0">
               Our experts can help you design a custom PC that meets your specific needs and budget.
             </p>
           </div>

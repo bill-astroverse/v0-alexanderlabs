@@ -121,12 +121,12 @@ export function ProductCard({ product }: { product: Product }) {
                 />
               ))}
             </div>
-            <span className="text-xs text-gray-500 ml-1">({Math.floor(Math.random() * 500) + 10})</span>
+            <span className="text-xs text-black ml-1">({Math.floor(Math.random() * 500) + 10})</span>
           </div>
 
           <div className="mt-2">
             <p className="text-lg sm:text-xl font-bold text-red-600">{formattedPrice}</p>
-            <p className="text-xs sm:text-sm text-gray-500 line-through">{formattedOriginalPrice}</p>
+            <p className="text-xs sm:text-sm text-black line-through">{formattedOriginalPrice}</p>
           </div>
 
           {product.use_cases && product.use_cases.length > 0 && (

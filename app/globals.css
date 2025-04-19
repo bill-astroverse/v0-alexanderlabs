@@ -15,7 +15,7 @@
     --secondary: 0 100% 50%;
     --secondary-foreground: 210 40% 98%;
     --muted: 210 40% 96.1%;
-    --muted-foreground: 222 47% 11%; /* Changed from gray to black */
+    --muted-foreground: 0 0% 0%; /* Changed to black for better visibility */
     --accent: 142 76% 36%; /* Green accent */
     --accent-foreground: 222 47% 11%;
     --destructive: 0 84% 60%;

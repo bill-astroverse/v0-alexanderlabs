@@ -114,7 +114,7 @@ export default function ProductDetailPage({ params }: { params: { productId: str
           </div>
 
           <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
-          <p className="text-gray-600 mb-4">{product.description}</p>
+          <p className="text-black mb-4">{product.description}</p>
 
           <div className="text-3xl font-bold text-green-700 mb-6">{formattedPrice}</div>
 
@@ -201,7 +201,7 @@ export default function ProductDetailPage({ params }: { params: { productId: str
               Object.entries(product.specs).map(([key, value]) => (
                 <div key={key} className="border-b pb-2">
                   <p className="font-medium capitalize">{key}</p>
-                  <p className="text-gray-600">{value as string}</p>
+                  <p className="text-black">{value as string}</p>
                 </div>
               ))}
           </div>

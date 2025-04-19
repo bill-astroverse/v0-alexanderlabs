@@ -35,7 +35,7 @@ export async function ProductList({
     return (
       <div className="text-center py-12">
         <h2 className="text-2xl font-bold mb-2">No products found</h2>
-        <p className="text-foreground/70">Try adjusting your filters or search query</p>
+        <p className="text-black">Try adjusting your filters or search query</p>
       </div>
     )
   }

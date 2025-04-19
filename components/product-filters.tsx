@@ -231,7 +231,7 @@ export function ProductFilters() {
                     className={`px-4 py-2 hover:bg-muted cursor-pointer ${currentCategory === category.id ? "bg-muted" : ""}`}
                     onClick={() => handleCategoryChange(category.id)}
                   >
-                    {category.name}
+                    <span className="text-black">Select {category.name}</span>
                   </div>
                 ))}
               </div>
@@ -244,7 +244,9 @@ export function ProductFilters() {
         <Card className="mb-8">
           <CardHeader>
             <CardTitle>Advanced Filters</CardTitle>
-            <CardDescription>Refine your search with additional filters</CardDescription>
+            <CardDescription>
+              <p className="text-sm text-black">Refine your search with additional filters</p>
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
